@@ -1,0 +1,198 @@
+.wrapper {
+  min-height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background: #000;
+}
+
+.header {
+  max-width: 1440px;
+  height: 100px;
+  margin: 0 auto;
+}
+
+.header__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 60px;
+}
+
+.header__nav-listLeft {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin: 20px 60px 0 0;
+}
+
+.header__nav-item {
+  margin-right: 45px;
+}
+.header__nav-item:last-child {
+  margin-right: 0;
+}
+
+.header__nav-link {
+  color: #FFF;
+  font-family: Inter;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.header__nav-listRight {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin: 20px 0 0 60px;
+}
+
+.blockSlider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  max-width: 1940px;
+  height: 700px;
+  margin-right: auto;
+  margin-left: auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.FullArea {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.pointAreaSize {
+  width: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: absolute;
+  bottom: 5%;
+  display: none;
+}
+
+.point {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 12px;
+  height: 12px;
+  background: rgb(229, 229, 229);
+  border-radius: 100px;
+  cursor: pointer;
+}
+
+.point:hover {
+  background: rgb(160, 167, 243);
+}
+
+.imagesArea {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.imageSlider {
+  display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  overflow: hidden;
+  -webkit-animation-name: Animation;
+          animation-name: Animation;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+}
+
+.activeImage {
+  background: rgb(115, 126, 255);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.btnsAreaSize {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 95%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  display: none;
+}
+
+i.fa-angle-left, i.fa-angle-right {
+  color: rgb(115, 126, 250);
+  font-size: 24px;
+  cursor: pointer;
+  font-weight: 800;
+}
+
+.blockArrow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+  border: 1px solid #fff;
+  border-radius: 50px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.blockArrow:hover {
+  background: rgba(39, 39, 39, 0.59);
+  border: 1px solid #fff;
+  color: #fff;
+  cursor: pointer;
+}
+
+.blockArrow:active {
+  background: rgba(16, 16, 16, 0.59);
+  border: 1px solid #fff;
+  color: #fff;
+  cursor: pointer;
+}
+
+@-webkit-keyframes Animation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
