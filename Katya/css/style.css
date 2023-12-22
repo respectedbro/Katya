@@ -1,0 +1,247 @@
+@charset "UTF-8";
+html, body {
+  font-family: Inter, sans-serif;
+}
+
+.wrapper {
+  min-height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background: #000;
+}
+
+.header {
+  max-width: 1440px;
+  height: 100px;
+  margin: 0 auto;
+}
+
+.footer {
+  margin-top: 40px;
+}
+
+.header__nav {
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+}
+
+.header__nav-listLeft {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 60px 0 0;
+}
+
+.header__nav-item {
+  margin-right: 45px;
+}
+.header__nav-item:last-child {
+  margin-right: 0;
+}
+
+.header__nav-link {
+  color: #FFF;
+  font-family: Inder;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.header__nav-listRight {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0 0 60px;
+}
+
+.blockSlider {
+  display: flex;
+  width: 100%;
+  max-width: 1940px;
+  height: 80vh; /* использование вьюпорта для высоты */
+  margin-right: auto;
+  margin-left: auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.FullArea {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.pointAreaSize {
+  width: 150px;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 5%;
+  display: none;
+}
+
+.point {
+  display: flex;
+  width: 12px;
+  height: 12px;
+  background: rgb(229, 229, 229);
+  border-radius: 100px;
+  cursor: pointer;
+}
+
+.point:hover {
+  background: rgb(160, 167, 243);
+}
+
+.imagesArea {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.imageSlider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 2s ease;
+  -o-object-fit: cover;
+     object-fit: cover; /* использование свойства object-fit */
+}
+
+.activeImage {
+  background: rgb(115, 126, 255);
+  display: flex;
+  opacity: 1;
+}
+
+.btnsAreaSize {
+  position: absolute;
+  display: flex;
+  width: 95%;
+  justify-content: space-between;
+  display: none;
+}
+
+i.fa-angle-left, i.fa-angle-right {
+  color: rgb(115, 126, 250);
+  font-size: 24px;
+  cursor: pointer;
+  font-weight: 800;
+}
+
+.blockArrow {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+  border: 1px solid #fff;
+  border-radius: 50px;
+  align-items: center;
+  justify-content: center;
+}
+
+.blockArrow:hover {
+  background: rgba(39, 39, 39, 0.59);
+  border: 1px solid #fff;
+  color: #fff;
+  cursor: pointer;
+}
+
+.blockArrow:active {
+  background: rgba(16, 16, 16, 0.59);
+  border: 1px solid #fff;
+  color: #fff;
+  cursor: pointer;
+}
+
+.footer__content {
+  max-width: 806px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer__text-top {
+  color: #FFF;
+  text-align: center;
+  font-family: Inder;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.footer__socials {
+  margin-top: 50px;
+}
+
+.footer_socials-list {
+  display: flex;
+  justify-content: center;
+}
+
+.footer_socials-item {
+  margin-right: 20px;
+}
+.footer_socials-item:last-child {
+  margin: 0;
+}
+
+.footer__phone {
+  color: #FFF;
+  text-align: center;
+  font-family: Inder;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-top: 10px;
+}
+
+.footer__text-bot {
+  max-width: 565px;
+  margin: 15px 0 40px 0;
+}
+
+.footer__text-desc {
+  color: #FFF;
+  text-align: center;
+  font-family: Inter;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+@media screen and (max-width: 768px) {
+  /* стили для маленьких экранов */
+}
+@media screen and (min-width: 769px) and (max-width: 1200px) {
+  /* стили для средних экранов */
+}
+@media screen and (max-width: 1300px) {
+  .blockSlider {
+    height: 75vh;
+    max-width: 1300px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .blockSlider {
+    height: 65vh;
+    max-width: 1200px;
+  }
+}
+@media screen and (max-width: 950px) {
+  .blockSlider {
+    height: 55vh;
+    max-width: 950px;
+  }
+}
