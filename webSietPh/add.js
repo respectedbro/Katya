@@ -62,13 +62,4 @@ counter = 0
 let second = 1000*5;
 let TimerImage = setInterval(() => slowSlider(), second);
 
-const burger = document.querySelector('.burger');
 
-burger.addEventListener('click', () => {
-  burger.classList.toggle('active');
-});
-
-$('.burger').on('click', function (e) {
-e.preventDefault()
-$('.header__inner').toggleClass('header__inner--open')
-})
