@@ -597,7 +597,7 @@ i.fa-angle-right {
           justify-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  overflow-y: scroll;
+  max-height: 700px;
 }
 
 .img-c {
@@ -682,6 +682,9 @@ i.fa-angle-right {
   }
   .footer__content {
     max-width: 561px;
+  }
+  .gallery {
+    overflow-y: scroll;
   }
 }
 @media screen and (max-width: 950px) {
