@@ -1,5 +1,4 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css?family=DM+Sans:400,500,700&display=swap");
 html,
 body {
   font-family: Inder, sans-serif;
@@ -793,16 +792,6 @@ i.fa-angle-right {
   filter: contrast(70%);
 }
 
-@media screen and (max-width: 880px) {
-  .wrapper {
-    width: 50%;
-  }
-}
-@media screen and (max-width: 520px) {
-  .wrapper {
-    width: 100%;
-  }
-}
 @media screen and (max-width: 768px) {
   /* стили для маленьких экранов */
 }
@@ -1010,5 +999,15 @@ i.fa-angle-right {
   }
   .order__button {
     margin: 20px 0;
+  }
+}
+@media screen and (max-width: 880px) {
+  .wrapperr {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 520px) {
+  .wrapperr {
+    width: 100%;
   }
 }
