@@ -10,17 +10,19 @@ body {
   width: 100%;
   overflow: hidden;
   background: #000;
-  padding: 20px 15px;
+  padding: 20px 0;
 }
 .header {
   max-width: 1440px;
   height: 12vh;
   margin: 0 auto;
   padding-top: 5px;
+  
 }
 .header__logo {
   display: flex;
   justify-content: center;
+ 
 }
 .header__logo2 {
   display: none;
@@ -75,7 +77,7 @@ body {
   display: inline-block;
   padding: 5px 0;
   position: relative;
-  -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   transition: all 0.3s ease-in-out;
   &:before {
@@ -264,12 +266,80 @@ svg {
 .footer__text-desc {
   text-align: center;
   font-size: 12px;
-  font-weight: 700;
+  font-weight: 400;
   line-height: normal;
 }
-// -------------------------------------------------------------------SERVICES--------------------------------------------------------------------------
+// ----------------------------------------------------------------------Page-About-----------------------------------------------------------------------
+
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 15px;
+}
+.about__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-right: 45px;
+}
+.about__title {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.title__name {
+  text-align: center;
+  margin-bottom: 10px;
+}
+.title__desc {
+}
+.about__desc {
+  max-width: 418px;
+}
+.desc__text {
+font-size: 14px;
+font-weight: 300;
+line-height: normal;
+ 
+}
+
+.about__order {
+}
+.order__button {
+  transition: all .5s ease;
+  color: #fff;
+  border: 3px solid white;
+  font-family:'Montserrat', sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 1;
+  font-size: 12px;
+  background-color : transparent;
+  padding: 10px;
+  outline: none;
+  border-radius: 4px;
+margin-top: 30px;
+&:hover {
+  color: #001F3F;
+  background-color: #fff;
+}
+}
+.about__image {
+  img {
+    max-width: 400px;
+  }
+}
+
+
+
+// -------------------------------------------------------------------page-SERVICES--------------------------------------------------------------------------
 // 
 .services {
+  max-width: 1440px;
+  margin: 0 auto;
 }
 .services__title {
  text-align: center;
@@ -317,12 +387,13 @@ flex-wrap: wrap;
 }
 .services__price {
   width: 470px;
-  justify-content: center;
+  justify-content: space-evenly;
   display: flex;
 margin: 30px 0 20px 0;
 }
 .prise1 {
   text-align: center;
+  margin-top: 10px;
 }
 .prise2 {
   
@@ -331,6 +402,22 @@ margin: 30px 0 20px 0;
 
 }
 .button-order {
+  transition: all .5s ease;
+  color: #fff;
+  border: 3px solid white;
+  font-family:'Montserrat', sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 1;
+  font-size: 12px;
+  background-color : transparent;
+  padding: 10px;
+  outline: none;
+  border-radius: 4px;
+&:hover {
+  color: #001F3F;
+  background-color: #fff;
+}
   
 }
 .divider {                /* minor cosmetics */
@@ -367,7 +454,7 @@ margin: 30px 0 20px 0;
   background-image: linear-gradient(90deg, #fff, transparent);
 }
 
-// ---------------------------------------------------addit------------------------------------------------------------------------------------------
+// ---------------------------------------------------section-addit-------------------
 // 
 .addit {
 }
@@ -376,6 +463,8 @@ margin: 30px 0 20px 0;
   flex-direction: column;
 }
 .addit__info {
+  max-width: 600px;
+  margin: 0 auto;
 }
 .addit__info-list {
 }
@@ -383,9 +472,10 @@ margin: 30px 0 20px 0;
   text-align: center;
 }
 .addit__price {
-  
+  margin: 0 auto;
 }
 .addit-list {
+  
  
 }
 
@@ -399,6 +489,76 @@ margin: 30px 0 20px 0;
 
 // ---------------------------------------------------------------------------------------------------------------------------------------------
 // 
+
+.pirtfolio {
+  position: relative;
+}
+
+.gallery {
+  max-width: 1440px;
+  margin: auto;
+  border-radius: 3px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  overflow-y: scroll;
+  //position: relative;
+}
+.img-c {
+  width: 200px;
+  height: 200px;
+  float: left;
+  position: relative;
+  overflow: hidden;
+}
+
+.img-w {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  transition: transform ease-in-out 300ms;
+}
+
+.img-w img {
+  display: none;
+}
+
+.img-c {
+    transition: width ease 400ms, height ease 350ms, left cubic-bezier(0.4, 0, 0.2, 1) 420ms, top cubic-bezier(0.4, 0, 0.2, 1) 420ms;
+}
+
+.img-c:hover .img-w {
+  transform: scale(1.08);
+  transition: transform cubic-bezier(0.4, 0, 0.2, 1) 450ms;
+}
+
+.img-c.active {
+  width: 100% !important;
+  height: 100% !important;
+  position: absolute;
+  z-index: 2;
+  //transform: translateX(-50%);
+}
+
+.img-c.postactive {
+  position: absolute;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.img-c.active.positioned {
+  left: 0 !important;
+  top: 0 !important;
+  transition-delay: 50ms;
+}
+
+// ----------------------------------------------------------------------Media-----------------------------------------------------------------------
+
 @media screen and (max-width: 768px) {
   /* стили для маленьких экранов */
 }
@@ -526,12 +686,22 @@ margin: 30px 0 20px 0;
   .footer__text-top {
     font-size: 17px;
   }
+
+  .addit-inner{
+    margin: 50px;
+  }
+  .addit-text {
+    margin-bottom: 20px;
+  }
 }
 @media screen and (max-width: 650px) {
   .blockSlider {
     height: 50vh;
     max-width: 600px;
   }
+  .about__image img {
+    max-width: 300px;
+}
 }
 @media screen and (max-width: 485px) {
   .blockSlider {
@@ -547,6 +717,64 @@ margin: 30px 0 20px 0;
 .footer__text-bot {
   margin: 15px 0 20px 0; 
 }
+.list__desc {
+  font-size: 14px;
+}
+.services__price {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.button-order {
+  margin-top: 20px;
+}
+.item__list {
+  max-width: 320px;
+}
+}
+
+@media screen and (max-width: 700px) {
+  .item__img img {
+width: 500px;
+  }
+}
+@media screen and (max-width: 550px) {
+  .about__image img {
+    max-width: 250px;
+}
+.about__content {
+  font-size: 14px;
+}
+}
+@media screen and (max-width: 500px) {
+  .item__img img {
+width: 350px;
+
+  }
+  .item__img {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+  }
+  .divider {
+    span {
+      font-size: 18px;
+    }
+  }
+  .addit-text {
+    font-size: 14px;
+  }
+  .about {
+    flex-direction: column;
+  }
+  .about__content {
+    margin: 0;
+  }
+  .order__button {
+    margin: 20px 0;
+  }
+  
 }
 
 // Путем комбинирования относительных единиц измерения vh и тд, свойства object-fit и медиа-запросов можно добиться адаптивности слайдера под разные расширения экрана.
