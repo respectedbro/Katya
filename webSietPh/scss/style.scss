@@ -522,6 +522,9 @@ line-height: 20px;
 
 // -----------------------------------------------------------------------PAGE-PORTFOLIO----------------------------------------------------------------------
 // 
+.portfolio {
+  max-width: 1440px;
+}
 .container {
   width: 100%;
   max-width: 1440px;
@@ -623,8 +626,71 @@ line-height: 20px;
 }
 
 
+// --------------------------------------------------------------------------SECTION-GALLERY5-------------------------------------------------------------------
 
 
+.gallery5 {
+  max-width: 1440px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  overflow-y: scroll;
+  max-height: 700px;
+  
+  //position: relative;
+}
+.img-c {
+  width: 500px;
+  height: 500px;
+  float: left;
+  position: relative;
+  overflow: hidden;
+}
+
+.img-w {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  transition: transform ease-in-out 300ms;
+}
+
+.img-w img {
+  display: none;
+}
+
+.img-c {
+    transition: width ease 400ms, height ease 350ms, left cubic-bezier(0.4, 0, 0.2, 1) 420ms, top cubic-bezier(0.4, 0, 0.2, 1) 420ms;
+}
+
+.img-c:hover .img-w {
+  transform: scale(1.08);
+  transition: transform cubic-bezier(0.4, 0, 0.2, 1) 450ms;
+}
+
+.img-c.active {
+  width: 100% !important;
+  height: 100% !important;
+  position: absolute;
+  z-index: 2;
+  //transform: translateX(-50%);
+}
+
+.img-c.postactive {
+  position: absolute;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.img-c.active.positioned {
+  left: 0 !important;
+  top: 0 !important;
+  transition-delay: 50ms;
+}
 
 
 
