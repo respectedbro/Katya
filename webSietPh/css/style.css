@@ -427,7 +427,14 @@ i.fa-angle-right {
   font-size: 24px;
   text-align: center;
   width: 75%; /* divider width */
-  margin: 15px auto; /* spacing above/below */
+  margin: 15px auto;
+  /* spacing above/below */
+}
+.divider span {
+  display: inline-block;
+  font-size: small;
+  text-transform: uppercase;
+  letter-spacing: 7px;
 }
 
 .divider span {
@@ -437,7 +444,7 @@ i.fa-angle-right {
 
 .divider span:first-child, .divider span:last-child {
   width: 50%;
-  top: 13px; /* adjust vertical align */ /* line width */
+  top: 5px; /* adjust vertical align */ /* line width */
   background-size: 100% 2px; /* line width */
   background-position: 0 0, 0 100%;
   background-repeat: no-repeat;
@@ -449,7 +456,7 @@ i.fa-angle-right {
 
 .divider span:nth-child(2) {
   color: #ffffff;
-  padding: 0px 5px;
+  padding: 0 0 0 6px;
   width: auto;
   white-space: nowrap;
 }
@@ -521,6 +528,14 @@ i.fa-angle-right {
   width: 33.3%;
   height: 100%;
   padding: 10px;
+  text-align: center;
+}
+.wrapperr span {
+  display: inline-block;
+  font-size: small;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  margin: 5px 0;
 }
 
 .name {
@@ -549,38 +564,6 @@ i.fa-angle-right {
 .box .hide {
   opacity: 0;
 }
-.box .frame {
-  position: absolute;
-  border: 1px solid #fff;
-  z-index: 2;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-.box h2, .box p {
-  position: absolute;
-  color: #fff;
-  z-index: 2;
-  width: 100%;
-  transition: opacity 0.2s, transform 0.3s;
-}
-.box h2 {
-  font-weight: 500;
-  font-size: 22px;
-  margin-bottom: 0;
-  letter-spacing: 1px;
-}
-.box p {
-  bottom: 0;
-  font-size: 14px;
-  letter-spacing: 1px;
-}
-.box:hover {
-  transition: all 0.3s ease-in-out;
-}
-.box:hover:before {
-  transition: all 0.3s ease-in-out;
-}
 .box img {
   position: relative;
   width: 100%;
@@ -605,185 +588,6 @@ i.fa-angle-right {
   transition: all 0.3s ease-in-out;
 }
 
-.zoom-in h2 {
-  top: 50%;
-  transform: translatey(-50%);
-  text-align: center;
-  margin: 0;
-}
-.zoom-in p {
-  text-align: center;
-  top: calc(50% + 40px);
-  transition: all 0.3s ease;
-  transform: scale(1.8);
-  opacity: 0;
-}
-.zoom-in:hover img {
-  transform: scale(1.1);
-  filter: grayscale(100%);
-}
-.zoom-in:hover p {
-  transform: scale(1);
-  transition: all 0.3s ease;
-  opacity: 1;
-}
-
-.w-content .frame {
-  width: calc(100% - 100px);
-  height: calc(100% - 100px);
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  border-color: transparent;
-}
-.w-content h2 {
-  margin-top: 0;
-  top: 50%;
-  transform: translatey(-50%);
-  text-align: center;
-  letter-spacing: 1px;
-}
-.w-content p {
-  transform: translate3d(0, -10px, 0);
-}
-.w-content:hover {
-  opacity: 0.8;
-}
-.w-content:hover .frame {
-  border-color: #fff;
-  transition: color 0.3s ease-in-out, all 0.3s ease-in-out;
-  width: calc(100% - 20px);
-  height: calc(100% - 20px);
-}
-
-.postcard h2 {
-  top: 50%;
-  text-align: left;
-  transform: translate3d(50px, 20px, 0);
-}
-.postcard p {
-  transform: translate3d(40px, 60px, 0);
-  font-size: 24px;
-  letter-spacing: 1px;
-}
-.postcard:hover h2 {
-  transform: translate3d(20px, 20px, 0);
-}
-.postcard:hover p {
-  opacity: 1;
-}
-.postcard:hover img {
-  filter: opacity(0.7);
-  transform: translate3d(-30px, 0, 0);
-}
-
-.blury-card .frame {
-  width: calc(100% - 40px);
-  height: calc(100% - 40px);
-  opacity: 0;
-  transition: all 0.3s ease-in-out;
-}
-.blury-card h2, .blury-card p {
-  text-align: center;
-  top: 50%;
-  transform: translatey(-50%);
-  margin: 0;
-  z-index: 3;
-}
-.blury-card p {
-  transform: translatey(30px);
-  letter-spacing: 3px;
-}
-.blury-card span {
-  font-size: 24px;
-}
-.blury-card:before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: #008E6B;
-  z-index: 1;
-  left: 0;
-  opacity: 0;
-  transition: all 0.3s ease-in-out;
-}
-.blury-card img {
-  z-index: 2;
-}
-.blury-card:hover .frame {
-  width: calc(100% - 120px);
-  height: calc(100% - 120px);
-  opacity: 1;
-}
-.blury-card:hover img {
-  opacity: 0.7;
-}
-.blury-card:hover:before {
-  opacity: 1;
-  transition: all 0.3s ease-in-out;
-}
-
-.vintage h2 {
-  top: 50%;
-  transform: translate3d(0, 60px, 0);
-  text-align: center;
-}
-.vintage p {
-  opacity: 0;
-  bottom: 0;
-  transform: translate3d(0, -10px, 0);
-  font-size: 14px;
-  letter-spacing: 1px;
-  text-align: center;
-}
-.vintage:before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(to bottom, rgba(72, 76, 97, 0) 0%, rgba(72, 76, 97, 0.8) 75%);
-  z-index: 2;
-  bottom: -100%;
-  left: 0;
-}
-.vintage:hover:before {
-  bottom: 0;
-}
-.vintage:hover h2 {
-  bottom: 40px;
-  transform: translate3d(0, 20px, 0);
-}
-.vintage:hover p {
-  opacity: 1;
-  transform: translate3d(0, -30px, 0);
-}
-
-.zoom-out .frame {
-  width: calc(100% - 100px);
-  height: calc(100% - 100px);
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: calc(100% - 40px);
-  height: calc(100% - 40px);
-}
-.zoom-out h2 {
-  font-size: 20px;
-  font-weight: 300;
-  margin-left: 10px;
-  letter-spacing: 1px;
-}
-.zoom-out span {
-  font-size: 24px;
-  font-weight: 500;
-}
-.zoom-out p {
-  max-width: 120px;
-  text-align: right;
-  margin: 10px;
-  right: 0;
-}
 .zoom-out img {
   transform: scale(1.1);
 }
@@ -966,6 +770,10 @@ i.fa-angle-right {
 @media screen and (max-width: 700px) {
   .item__img img {
     width: 500px;
+  }
+  .wrapperr span {
+    font-size: x-small;
+    letter-spacing: 6px;
   }
 }
 @media screen and (max-width: 550px) {
