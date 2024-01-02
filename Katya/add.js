@@ -60,4 +60,6 @@ counter = 0
 }
 
 let second = 1000*5;
-let TimerImage = setInterval(() => slowSlider(), second)
+let TimerImage = setInterval(() => slowSlider(), second);
+
+
