@@ -520,10 +520,11 @@ textarea {
   margin: 0 auto;
 }
 .services__title {
- text-align: center;
- margin: 30px 0;
-font-size: 20px;
-font-weight: 700;
+  font-size: small;
+  text-transform: uppercase;
+  letter-spacing: 7px;
+  margin-top: 20px;
+  text-align: center;
 }
 .services__inner {
 margin-top: 25px;
@@ -674,6 +675,13 @@ margin: 30px 0 20px 0;
 
 // ------------------------------------------------------------------Page-CONTACTS---------------------------------------------------------------------------
 // 
+.contacts__title {
+    font-size: small;
+    text-transform: uppercase;
+    letter-spacing: 7px;
+    text-align: center;
+    margin: 20px 0;
+}
 .contacts__inner {
   display: flex;
   flex-direction: column;
@@ -698,22 +706,30 @@ line-height: 20px;
 
 
 
-// -----------------------------------------------------------------------PAGE-PORTFOLIO----------------------------------------------------------------------
+// -----------------------------------------------------------------------PAGE-INDI----------------------------------------------------------------------
 // 
-.portfolio {
+.indi {
   max-width: 1440px;
 }
 
 
-.container {
+.indi__container {
   width: 100%;
   max-width: 1440px;
   border-radius: 4px;
   margin: 0 auto;
  
 }
+.indi__title {
+  display: inline-block;
+  font-size: small;
+  text-transform: uppercase;
+  letter-spacing: 7px;
+  margin-top: 20px;
+  margin-bottom: 25px;
+}
 
-.content {
+.indi__content {
   display: flex;
   flex-wrap: wrap;
   padding: 0 30px;
@@ -727,9 +743,9 @@ line-height: 20px;
   text-align: center;
   span { 
       display: inline-block;
-      font-size: smaller;
+      font-size: 11px;
       text-transform: uppercase;
-      letter-spacing: 5px;
+      letter-spacing: 3px;
       margin-top: 12px;
   }
   }
