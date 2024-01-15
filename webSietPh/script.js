@@ -122,3 +122,4 @@ lightBoxContainer.addEventListener("click", closeLightBox);
     speed: 200
   });
 })();
+
