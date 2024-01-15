@@ -520,16 +520,12 @@ textarea {
     width: 250px;
   }
   .form__cnt {
-    display: block;
+    display: inline-block;
     width: 320px;
   }
   .order__ttl {
     width: auto;
     white-space: nowrap;
-  }
-  .js #contact {
-    display: block;
-    width: 330px;
   }
 }
 .services {

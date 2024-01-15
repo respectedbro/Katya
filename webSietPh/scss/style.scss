@@ -497,8 +497,8 @@ textarea {
     width: 250px;
   }
  
-  .form__cnt {
-    display: block;
+  .form__cnt {   
+    display: inline-block;
     width: 320px;
   }
   .order__ttl {
@@ -506,9 +506,7 @@ textarea {
     white-space: nowrap;
 }
 .js #contact {
- 
-  display: block;
-  width: 330px;
+
 }
 }
 

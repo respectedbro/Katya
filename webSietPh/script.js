@@ -78,7 +78,7 @@ lightBoxContainer.addEventListener("click", closeLightBox);
 
 
 (function () {
-  $("html").addClass("js");
+  $("body").addClass("js");
 
   let contactForm = {
     container: $("#contact"),
