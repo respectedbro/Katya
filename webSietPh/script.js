@@ -82,6 +82,7 @@ lightBoxContainer.addEventListener("click", closeLightBox);
 
   let contactForm = {
     container: $("#contact"),
+    overlay: $("#overlay"),
     config: {
       effect: "slideToggle",
       speed: 200
@@ -90,15 +91,17 @@ lightBoxContainer.addEventListener("click", closeLightBox);
     init: function (config) {
       $.extend(this.config, config);
 
-      $("#c-btn").on("click", this.show);
+      $(".order__button").on("click", this.show);
     },
 
     show: function () {
       const cf = contactForm,
         container = cf.container,
+        overlay = cf.overlay,
         config = cf.config;
 
       if (container.is(":hidden")) {
+        overlay.fadeIn(config.speed);
         cf.close.call(container);
         container[config.effect](config.speed);
       }
@@ -112,7 +115,14 @@ lightBoxContainer.addEventListener("click", closeLightBox);
       $("<span class=close>-</span>")
         .prependTo(this)
         .on("click", function () {
-          $this[contactForm.config.effect](contactForm.config.speed);
+          const cf = contactForm,
+            container = cf.container,
+            overlay = cf.overlay,
+            config = cf.config;
+
+          container[config.effect](config.speed, function () {
+            overlay.fadeOut(config.speed);
+          });
         });
     }
   };
@@ -121,5 +131,21 @@ lightBoxContainer.addEventListener("click", closeLightBox);
     effect: "fadeToggle",
     speed: 200
   });
+
+  $(document).mouseup(function (e) {
+    const container = $("#contact");
+
+    if (!container.is(e.target) && container.has(e.target).length === 0) {
+      const cf = contactForm,
+        overlay = cf.overlay,
+        config = cf.config;
+
+      container.fadeOut(config.speed, function () {
+        overlay.fadeOut(config.speed);
+      });
+    }
+  });
 })();
+
+
 
