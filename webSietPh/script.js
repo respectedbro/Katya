@@ -18,7 +18,8 @@ $('.header__inner').toggleClass('header__inner--open')
 const galleryItems = document.getElementsByClassName("gallery-item");
 const venchItems = document.getElementsByClassName("vench-item");
 const lovestrItems = document.getElementsByClassName("lovestr-item");
-const galleryItem = [...galleryItems, ...venchItems, ...lovestrItems];
+const sem1Items = document.getElementsByClassName("sem1-item");
+const galleryItem = [...galleryItems, ...venchItems, ...lovestrItems,...sem1Items];
 const lightBoxContainer = document.createElement("div");
 const lightBoxContent = document.createElement("div");
 const lightBoxImg = document.createElement("img");

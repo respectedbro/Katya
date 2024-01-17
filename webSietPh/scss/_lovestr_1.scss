@@ -1,0 +1,30 @@
+
+
+
+
+.lovestr-item {
+  flex-basis: 32.7%;
+  margin-bottom: 6px;
+  opacity: .85;
+  cursor: pointer;
+}
+
+.lovestr-item:nth-child(1),
+.lovestr-item:nth-child(2),
+.lovestr-item:nth-child(3) {
+  flex-basis: 32.7%;
+  opacity: .85;
+  cursor: pointer; 
+}
+.lovestr-item:nth-child(4),
+.lovestr-item:nth-child(5) {
+  flex-basis: 49.5%;
+}
+.lovestr-item:hover {
+  opacity: 1;
+}
+.lovestr-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
