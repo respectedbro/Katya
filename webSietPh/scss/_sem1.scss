@@ -8,7 +8,9 @@
 .sem1-item:nth-child(1),
 .sem1-item:nth-child(2),
 .sem1-item:nth-child(6),
-.sem1-item:nth-child(7)
+.sem1-item:nth-child(7),
+.sem1-item:nth-child(8),
+.sem1-item:nth-child(9)
 {
   flex-basis: 49.5%;
   opacity: .85;
@@ -19,9 +21,7 @@
 .sem1-item:nth-child(5) {
   flex-basis: 32.7%;
 }
-.sem1-item:nth-child(8) {
-  flex-basis: 99.7%;
-}
+
 .sem1-item:hover {
   opacity: 1;
 }

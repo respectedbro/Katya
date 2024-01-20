@@ -49,6 +49,7 @@ flex-wrap: wrap;
 .list__desc  {
   list-style: disc;
   margin: 6px 0;
+  opacity: 0.79;
 }
 .services__price {
   width: 470px;
@@ -125,16 +126,18 @@ margin: 30px 0 20px 0;
 }
 .addit__info-list {
   margin: 15px auto;
+  line-height: 22px;
 }
 .addit__info-text {
   text-align: center;
+  opacity: 0.79;
 }
 .addit__price {
   margin: 0 auto;
 }
 .addit-list {
-  
- 
+  opacity: 0.79;
+  line-height: 22px;
 }
 
 .addit-text {

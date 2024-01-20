@@ -1,13 +1,22 @@
 @import 
 "lovestr_1",
+"lovestr_2",
 "about",
 "services",
 "contacts",
 "indi",
 "indi_1",
+"indi_2",
+"indi_3",
+"indi_4",
 "testimonials",
 "vench_1",
-"sem1";
+"sem1",
+"sem3",
+"sem2",
+"swa1",
+"swa2",
+"twor";
 
 
 
@@ -174,16 +183,38 @@ display: inline-block;
   }
 }
 
+.btn_telegram_share {
+  position: fixed;
+  top: 25px;
+  right: 60px;
+}
+/*.btn_telegram_share:focus*/
+
+.btn_telegram_share:before{
+  content:  "\0000a0";
+  display: inline-block;
+  height: 54px;
+  width: 54px;
+  line-height: 24px;
+  margin: 0 4px -6px -4px;
+  position: relative;
+  top: 0px;
+  left: 0px;
+  background: url("/images/icons/teleg.png") no-repeat left center transparent;
+  background-size: 100% 100%;
+}
 // ---------------------------------------------------------------------------------------------------------------------------------------------
 
 .blockSlider {
   display: flex;
   width: 100%;
   max-width: 1440px;
-  height: 80vh; /* использование вьюпорта для высоты */
+  height: 100vh; /* использование вьюпорта для высоты */
   position: relative;
   overflow: hidden;
   margin: 0 auto;
+  max-height: 1000px;
+ cursor: url(/images/icons/ping.png), pointer ;
 }
 
 .FullArea {
@@ -244,7 +275,7 @@ display: inline-block;
   display: flex;
   width: 95%;
   justify-content: space-between;
-  display: none;
+  
 }
 
 i.fa-angle-left,
@@ -263,6 +294,7 @@ i.fa-angle-right {
   border-radius: 50px;
   align-items: center;
   justify-content: center;
+  display: none;
 }
 .blockArrow:hover {
   background: rgba(39, 39, 39, 0.59);
@@ -372,12 +404,12 @@ svg {
 }
 @media screen and (max-width: 1300px) {
   .blockSlider {
-    height: 75vh;
+    height: 95vh;
   }
 }
 @media screen and (max-width: 1200px) {
   .blockSlider {
-    height: 65vh;
+    height: 70vh;
     max-width: 1000px;
   }
   .footer__text-top {
@@ -389,7 +421,7 @@ svg {
 }
 @media screen and (max-width: 950px) {
   .blockSlider {
-    height: 55vh;
+    height: 65vh;
     max-width: 900px;
   }
 }
@@ -500,8 +532,9 @@ svg {
    padding-bottom: 30px;
   }
   .blockSlider {
-    height: 50vh;
+    height: 55vh;
     max-width: 700px;
+   
   }
   .footer__text-top {
     font-size: 17px;
@@ -516,7 +549,7 @@ svg {
 }
 @media screen and (max-width: 650px) {
   .blockSlider {
-    height: 50vh;
+    height: 55vh;
     max-width: 600px;
   }
   .about__image img {
@@ -525,7 +558,7 @@ svg {
 }
 @media screen and (max-width: 485px) {
   .blockSlider {
-    height: 40vh;
+    height: 36vh;
     max-width: 600px;
   }
   .footer__content {
@@ -592,6 +625,7 @@ width: 350px;
   .services-diviper {
     & span:nth-child(2) {
       white-space: wrap;
+      line-height: 24px;
     }
   }
   .addit-text {

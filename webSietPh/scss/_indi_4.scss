@@ -1,0 +1,34 @@
+.indi4-item {
+  flex-basis: 32.7%;
+  margin-bottom: 6px;
+  opacity: .85;
+  cursor: pointer;
+}
+
+.indi4-item:nth-child(4)
+
+{
+  flex-basis: 49.5%;
+  opacity: .85;
+  cursor: pointer; 
+  align-items: center;
+}
+.indi4-item:nth-child(5),
+.indi4-item:nth-child(6)
+{
+  flex-basis: 66.7%;
+}
+.indi4-item:nth-child(4),
+.indi4-item:nth-child(7)
+{
+  flex-basis: 32.7%;
+}
+
+.indi4-item:hover {
+  opacity: 1;
+}
+.indi4-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

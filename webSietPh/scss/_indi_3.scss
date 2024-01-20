@@ -1,0 +1,28 @@
+.indi3-item {
+  flex-basis: 32.7%;
+  margin-bottom: 6px;
+  opacity: .85;
+  cursor: pointer;
+}
+
+.indi3-item:nth-child(4),
+.indi3-item:nth-child(5),
+.indi3-item:nth-child(9),
+.indi3-item:nth-child(10),
+.indi3-item:nth-child(11),
+.indi3-item:nth-child(12)
+{
+  flex-basis: 49.5%;
+  opacity: .85;
+  cursor: pointer; 
+  align-items: center;
+}
+
+.indi3-item:hover {
+  opacity: 1;
+}
+.indi3-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

@@ -43,6 +43,7 @@ margin: 30px 0;
 .content-desc {
   margin-bottom: 20px;
   line-height: 27px;
+  opacity: 0.79;
 }
 .content-btn {
   transition: all .5s ease;
@@ -57,6 +58,7 @@ margin: 30px 0;
   padding: 10px;
   outline: none;
   border-radius: 4px;
+  max-width: 160px;
 &:hover {
   color: #001F3F;
   background-color: #fff;

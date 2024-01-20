@@ -17,11 +17,12 @@
 }
 .about__title {
   text-align: center;
-  margin-bottom: 30px;
+  margin: 30px 0;
 }
 .title__name {
   text-align: center;
   margin-bottom: 10px;
+  font-size: 20px;
 }
 .title__desc {
 }
@@ -32,7 +33,7 @@
 font-size: 14px;
 font-weight: 300;
 line-height: normal;
- 
+opacity: 0.79;
 }
 
 .about__order {
@@ -71,6 +72,7 @@ input:focus {
   list-style: none;
 }
 .order__ttl {
+  display: block;
   text-transform: uppercase;
   color: rgb(57, 57, 57);
   font-size: 17px;

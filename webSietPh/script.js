@@ -5,8 +5,8 @@ burger.addEventListener('click', () => {
 });
 
 $('.burger').on('click', function (e) {
-e.preventDefault()
-$('.header__inner').toggleClass('header__inner--open')
+  e.preventDefault()
+  $('.header__inner').toggleClass('header__inner--open')
 })
 
 
@@ -16,10 +16,19 @@ $('.header__inner').toggleClass('header__inner--open')
 
 
 const galleryItems = document.getElementsByClassName("gallery-item");
+const indi2Items = document.getElementsByClassName("indi2-item");
+const indi3Items = document.getElementsByClassName("indi3-item");
+const indi4Items = document.getElementsByClassName("indi4-item");
 const venchItems = document.getElementsByClassName("vench-item");
 const lovestrItems = document.getElementsByClassName("lovestr-item");
+const lovestr2Items = document.getElementsByClassName("lovestr2-item");
 const sem1Items = document.getElementsByClassName("sem1-item");
-const galleryItem = [...galleryItems, ...venchItems, ...lovestrItems,...sem1Items];
+const sem2Items = document.getElementsByClassName("sem2-item");
+const sem3Items = document.getElementsByClassName("sem3-item");
+const swa1Items = document.getElementsByClassName("swa1-item");
+const swa2Items = document.getElementsByClassName("swa2-item");
+const tworItems = document.getElementsByClassName("twor-item");
+const galleryItem = [...galleryItems, ...venchItems, ...lovestrItems, ...lovestr2Items, ...sem1Items, ...sem2Items, ...sem3Items, ...swa1Items, ...swa2Items, ...tworItems, ...indi2Items, ...indi3Items, ...indi4Items];
 const lightBoxContainer = document.createElement("div");
 const lightBoxContent = document.createElement("div");
 const lightBoxImg = document.createElement("img");
@@ -41,41 +50,41 @@ document.body.appendChild(lightBoxContainer);
 let index = 1;
 
 function showLightBox(n) {
-    if (n > galleryItem.length) {
-        index = 1;
-    } else if (n < 1) {
-        index = galleryItem.length;
-    }
-    let imageLocation = galleryItem[index-1].children[0].getAttribute("src");
-    lightBoxImg.setAttribute("src", imageLocation);
+  if (n > galleryItem.length) {
+    index = 1;
+  } else if (n < 1) {
+    index = galleryItem.length;
+  }
+  let imageLocation = galleryItem[index - 1].children[0].getAttribute("src");
+  lightBoxImg.setAttribute("src", imageLocation);
 }
 
 function currentImage() {
-    lightBoxContainer.style.display = "block";
+  lightBoxContainer.style.display = "block";
 
-    let imageIndex = parseInt(this.getAttribute("data-index"));
-    showLightBox(index = imageIndex);
+  let imageIndex = parseInt(this.getAttribute("data-index"));
+  showLightBox(index = imageIndex);
 }
 for (let i = 0; i < galleryItem.length; i++) {
-    galleryItem[i].addEventListener("click", currentImage);
+  galleryItem[i].addEventListener("click", currentImage);
 }
 
 function slideImage(n) {
-    showLightBox(index += n);
+  showLightBox(index += n);
 }
 function prevImage() {
-    slideImage(-1);
+  slideImage(-1);
 }
 function nextImage() {
-    slideImage(1);
+  slideImage(1);
 }
 lightBoxPrev.addEventListener("click", prevImage);
 lightBoxNext.addEventListener("click", nextImage);
 
 function closeLightBox() {
-    if (this === event.target) {
-        lightBoxContainer.style.display = "none";
-    }
+  if (this === event.target) {
+    lightBoxContainer.style.display = "none";
+  }
 }
 lightBoxContainer.addEventListener("click", closeLightBox);
 
