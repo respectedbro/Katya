@@ -185,7 +185,7 @@ display: inline-block;
 
 .btn_telegram_share {
   position: fixed;
-  top: 25px;
+  bottom: 45px;
   right: 60px;
 }
 /*.btn_telegram_share:focus*/
@@ -193,8 +193,8 @@ display: inline-block;
 .btn_telegram_share:before{
   content:  "\0000a0";
   display: inline-block;
-  height: 54px;
-  width: 54px;
+  height: 40px;
+  width: 40px;
   line-height: 24px;
   margin: 0 4px -6px -4px;
   position: relative;
@@ -374,7 +374,12 @@ svg {
   font-weight: 400;
   line-height: normal;
 }
-
+.tglink {
+  display: none;
+  opacity: 0.6;
+  font-size: 12px;
+  margin: 10px 0 10px 0;
+}
 // ---------------------------------------------------------------------------------------------------------------------------------------------
 // 
 .gallery__title {
@@ -537,7 +542,7 @@ svg {
    
   }
   .footer__text-top {
-    font-size: 17px;
+    font-size: 14px;
   }
 
   .addit-inner{
@@ -555,6 +560,12 @@ svg {
   .about__image img {
     max-width: 300px;
 }
+.btn_telegram_share {
+  display: none;
+}
+.tglink {
+ display: block;
+}
 }
 @media screen and (max-width: 485px) {
   .blockSlider {
@@ -569,6 +580,9 @@ svg {
 }
 .footer__text-bot {
   margin: 15px 0 20px 0; 
+}
+.footer__text-top {
+  font-size: 12px;
 }
 .list__desc {
   font-size: 14px;

@@ -898,6 +898,10 @@ textarea {
   border-radius: 4px;
   max-width: 160px;
 }
+.content-btn a {
+  padding: 2px;
+  white-space: nowrap;
+}
 .content-btn:hover {
   color: #001F3F;
   background-color: #fff;
@@ -1421,7 +1425,7 @@ li:hover > .submenu {
 }
 .btn_telegram_share {
   position: fixed;
-  top: 25px;
+  bottom: 45px;
   right: 60px;
 }
 
@@ -1429,8 +1433,8 @@ li:hover > .submenu {
 .btn_telegram_share:before {
   content: " ";
   display: inline-block;
-  height: 54px;
-  width: 54px;
+  height: 40px;
+  width: 40px;
   line-height: 24px;
   margin: 0 4px -6px -4px;
   position: relative;
@@ -1670,6 +1674,13 @@ i.fa-angle-right {
   line-height: normal;
 }
 
+.tglink {
+  display: none;
+  opacity: 0.6;
+  font-size: 12px;
+  margin: 10px 0 10px 0;
+}
+
 .gallery__title {
   font-size: small;
   text-transform: uppercase;
@@ -1862,7 +1873,7 @@ i.fa-angle-right {
     max-width: 700px;
   }
   .footer__text-top {
-    font-size: 17px;
+    font-size: 14px;
   }
   .addit-inner {
     margin: 20px 50px;
@@ -1879,6 +1890,12 @@ i.fa-angle-right {
   .about__image img {
     max-width: 300px;
   }
+  .btn_telegram_share {
+    display: none;
+  }
+  .tglink {
+    display: block;
+  }
 }
 @media screen and (max-width: 485px) {
   .blockSlider {
@@ -1893,6 +1910,9 @@ i.fa-angle-right {
   }
   .footer__text-bot {
     margin: 15px 0 20px 0;
+  }
+  .footer__text-top {
+    font-size: 12px;
   }
   .list__desc {
     font-size: 14px;
