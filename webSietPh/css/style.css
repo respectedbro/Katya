@@ -455,6 +455,9 @@ textarea {
 .contacts__image {
   margin-bottom: 22px;
 }
+.contacts__image img {
+  max-width: 400px;
+}
 
 .contacts__info {
   max-width: 322px;
@@ -671,39 +674,11 @@ textarea {
   opacity: 0.8;
 }
 
-@media (max-width: 767px) {
-  .gallery-container {
-    width: 100%;
-  }
-  .gallery-item {
-    -ms-flex-preferred-size: 49.8%;
-        flex-basis: 49.8%;
-    margin-bottom: 3px;
-  }
-  .lightbox-content {
-    width: 80%;
-    height: 60%;
-    margin: 15% auto;
-  }
+.lightbox-content {
+  width: 90%;
+  margin: 20% auto;
 }
-@media (max-width: 480px) {
-  .gallery-item {
-    margin-bottom: 1px;
-  }
-  .gallery-item:nth-child(1),
-  .gallery-item:nth-child(2),
-  .gallery-item:nth-child(3),
-  .gallery-item:nth-child(4),
-  .gallery-item:nth-child(11),
-  .gallery-item:nth-child(12) {
-    -ms-flex-preferred-size: 100%;
-        flex-basis: 100%;
-  }
-  .lightbox-content {
-    width: 90%;
-    margin: 20% auto;
-  }
-}
+
 .indi2-item {
   -ms-flex-preferred-size: 32.7%;
       flex-basis: 32.7%;
