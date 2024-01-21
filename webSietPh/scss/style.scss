@@ -563,8 +563,13 @@ svg {
 .btn_telegram_share {
   display: none;
 }
-.tglink {
- display: block;
+
+ .tglink {
+  display: block;
+  opacity: 0.6;
+  font-size: 12px;
+  margin: 10px 0 10px 0;
+
 }
 }
 @media screen and (max-width: 485px) {
