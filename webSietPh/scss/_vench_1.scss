@@ -1,0 +1,53 @@
+
+.vench-item {
+  flex-basis: 32.7%;
+  margin-bottom: 6px;
+  opacity: .85;
+  cursor: pointer;
+  margin-bottom: 8px;
+}
+.vench-item:nth-child(1),
+.vench-item:nth-child(2),
+.vench-item:nth-child(3),
+.vench-item:nth-child(6),
+.vench-item:nth-child(7),
+.vench-item:nth-child(8)
+{
+  flex-basis: 32.5%;
+  opacity: .85;
+  cursor: pointer;
+}
+.vench-item:nth-child(4),
+.vench-item:nth-child(5),
+.vench-item:nth-child(9),
+.vench-item:nth-child(10),
+.vench-item:nth-child(14),
+.vench-item:nth-child(15),
+.vench-item:nth-child(21),
+.vench-item:nth-child(22)
+{
+  flex-basis: 49.5%;
+}
+.vench-item:nth-child(19)
+{
+  flex-basis: 32.7%;
+}
+.vench-item:nth-child(20)
+{
+  flex-basis: 66.3%;
+}
+.vench-item:hover {
+  opacity: 1;
+}
+.vench-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 500px) {
+  .vench-item {
+    
+    margin-bottom: 4px;
+  }
+  }

@@ -1,0 +1,28 @@
+// ------------------------------------------------------------------Page-CONTACTS---------------------------------------------------------------------------
+// 
+.contacts__title {
+  font-size: small;
+  text-transform: uppercase;
+  letter-spacing: 7px;
+  text-align: center;
+  margin: 20px 0;
+}
+.contacts__inner {
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+.contacts__image {
+margin-bottom: 22px;
+
+}
+.contacts__info {
+max-width: 322px;
+text-align: center;
+}
+.contacts__info-text {
+font-size: 16px;
+font-weight: 400;
+line-height: 20px;
+opacity: 0.79;
+}
