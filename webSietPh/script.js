@@ -35,6 +35,10 @@ const lightBoxImg = document.createElement("img");
 const lightBoxPrev = document.createElement("div");
 const lightBoxNext = document.createElement("div");
 
+const lightBoxClose = document.createElement("div");
+lightBoxClose.classList.add("fa", "fa-times", "lightbox-close");
+lightBoxContent.appendChild(lightBoxClose);
+
 lightBoxContainer.classList.add("lightbox");
 lightBoxContent.classList.add("lightbox-content");
 lightBoxPrev.classList.add("fa", "fa-angle-left", "lightbox-prev");
@@ -48,6 +52,8 @@ lightBoxContent.appendChild(lightBoxNext);
 document.body.appendChild(lightBoxContainer);
 
 let index = 1;
+let touchStartX = 0;
+let touchEndX = 0;
 
 function showLightBox(n) {
   if (n > galleryItem.length) {
@@ -65,6 +71,7 @@ function currentImage() {
   let imageIndex = parseInt(this.getAttribute("data-index"));
   showLightBox(index = imageIndex);
 }
+
 for (let i = 0; i < galleryItem.length; i++) {
   galleryItem[i].addEventListener("click", currentImage);
 }
@@ -72,22 +79,48 @@ for (let i = 0; i < galleryItem.length; i++) {
 function slideImage(n) {
   showLightBox(index += n);
 }
+
 function prevImage() {
   slideImage(-1);
 }
+
 function nextImage() {
   slideImage(1);
 }
+
 lightBoxPrev.addEventListener("click", prevImage);
 lightBoxNext.addEventListener("click", nextImage);
 
+function handleTouchStart(e) {
+  touchStartX = e.changedTouches[0].screenX;
+}
+
+function handleTouchMove(e) {
+  touchEndX = e.changedTouches[0].screenX;
+}
+
+function handleTouchEnd() {
+  const swipeThreshold = 50;
+  const swipeDistance = touchEndX - touchStartX;
+
+  if (swipeDistance > swipeThreshold) {
+    prevImage();
+  } else if (swipeDistance < -swipeThreshold) {
+    nextImage();
+  }
+}
+
+lightBoxContainer.addEventListener("touchstart", handleTouchStart);
+lightBoxContainer.addEventListener("touchmove", handleTouchMove);
+lightBoxContainer.addEventListener("touchend", handleTouchEnd);
+
 function closeLightBox() {
-  if (this === event.target) {
+  if (this === event.target || event.target.classList.contains("lightbox-close")) {
     lightBoxContainer.style.display = "none";
   }
 }
-lightBoxContainer.addEventListener("click", closeLightBox);
 
+lightBoxContainer.addEventListener("click", closeLightBox);
 
 
 (function () {
@@ -117,6 +150,7 @@ lightBoxContainer.addEventListener("click", closeLightBox);
         overlay.fadeIn(config.speed);
         cf.close.call(container);
         container[config.effect](config.speed);
+        cf.close.call(container);
       }
     },
 
@@ -159,6 +193,3 @@ lightBoxContainer.addEventListener("click", closeLightBox);
     }
   });
 })();
-
-
-

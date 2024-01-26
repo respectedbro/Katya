@@ -41,7 +41,7 @@
   background-color: rgba(0, 0, 0, 0.8);
   width: 100%;
   height: 100%;              
-  overflow: auto;
+  overflow: hidden;
   top: 0;
   left: 0;
 }
@@ -80,5 +80,14 @@
 
   .lightbox-content {
       width: 90%;
-      margin: 20% auto;
+      margin: 50px auto;
+  }
+
+  .lightbox-close {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
   }

@@ -28,3 +28,11 @@ font-weight: 400;
 line-height: 20px;
 opacity: 0.79;
 }
+
+
+@media screen and (max-width: 485px) {
+  .contacts__image img {
+    max-width: 300px;
+  }
+  
+}

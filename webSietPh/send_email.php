@@ -10,6 +10,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   $message = "Имя: $name\nEmail: $email\nТелефон: $tel\nСообщение: $message";
 
   mail($to, $subject, $message);
-  echo 'Письмо успешно отправлено';
+  
+  // Перенаправление на исходную страницу
+  header('Location: index.html');
+  exit();
 }
-?>

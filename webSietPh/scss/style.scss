@@ -243,7 +243,7 @@ display: inline-block;
 }
 
 .point:hover {
-  background: rgb(160, 167, 243);
+  background: rgb(0, 0, 0);
 }
 .imagesArea {
   width: 100%;
@@ -261,11 +261,11 @@ display: inline-block;
   height: 100%;
   opacity: 0;
   transition: opacity 2s ease;
-  object-fit: cover; /* использование свойства object-fit */
+  object-fit: cover; 
 }
 
 .activeImage {
-  background: rgb(115, 126, 260);
+  background: #000;
   display: flex;
   opacity: 1;
 }
@@ -280,7 +280,7 @@ display: inline-block;
 
 i.fa-angle-left,
 i.fa-angle-right {
-  color: rgb(115, 126, 250);
+  color: rgb(0, 0, 0);
   font-size: 24px;
   cursor: pointer;
   font-weight: 800;
@@ -568,7 +568,7 @@ svg {
   display: block;
   opacity: 0.6;
   font-size: 12px;
-  margin: 10px 0 10px 0;
+  margin: 20px 0 20px 0;
 
 }
 }
