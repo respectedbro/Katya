@@ -81,9 +81,7 @@ function slideImage(n) {
 }
 
 function prevImage() {
-  if (index > 1) {
-    slideImage(0);
-  }
+  slideImage(-1);
 }
 
 function nextImage() {
